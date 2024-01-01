@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_subjects",
+  "info": {
+    "singularName": "sub-subject",
+    "pluralName": "sub-subjects",
+    "displayName": "Sub_Subjects",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sub_subject_name": {
+      "type": "string"
+    },
+    "sub_subject_description": {
+      "type": "string"
+    },
+    "sub_section_subtext": {
+      "type": "string"
+    },
+    "sub_subject_slug": {
+      "type": "uid",
+      "targetField": "sub_subject_name"
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lesson.lesson",
+      "inversedBy": "sub_subjects"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subject.subject",
+      "inversedBy": "sub_subjects"
+    }
+  }
+}

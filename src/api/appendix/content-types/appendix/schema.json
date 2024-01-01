@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appendices",
+  "info": {
+    "singularName": "appendix",
+    "pluralName": "appendices",
+    "displayName": "appendix"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "appendix_name": {
+      "type": "string"
+    },
+    "appendix_description": {
+      "type": "text"
+    },
+    "appendix_slug": {
+      "type": "uid",
+      "targetField": "appendix_name"
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::lesson.lesson",
+      "inversedBy": "appendices"
+    }
+  }
+}

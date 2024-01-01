@@ -38,6 +38,15 @@
     "subject_slug": {
       "type": "uid",
       "targetField": "subject_name"
+    },
+    "subject_subtext": {
+      "type": "string"
+    },
+    "sub_subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-subject.sub-subject",
+      "mappedBy": "subjects"
     }
   }
 }

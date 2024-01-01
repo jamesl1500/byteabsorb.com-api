@@ -51,6 +51,18 @@
       "relation": "manyToOne",
       "target": "api::subject.subject",
       "inversedBy": "lessons"
+    },
+    "sub_subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::sub-subject.sub-subject",
+      "mappedBy": "lessons"
+    },
+    "appendices": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::appendix.appendix",
+      "mappedBy": "lessons"
     }
   }
 }
