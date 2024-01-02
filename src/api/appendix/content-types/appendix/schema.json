@@ -4,7 +4,8 @@
   "info": {
     "singularName": "appendix",
     "pluralName": "appendices",
-    "displayName": "appendix"
+    "displayName": "appendix",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,6 +27,9 @@
       "relation": "manyToMany",
       "target": "api::lesson.lesson",
       "inversedBy": "appendices"
+    },
+    "appendix_content": {
+      "type": "richtext"
     }
   }
 }
